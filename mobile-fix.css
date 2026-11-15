@@ -1,0 +1,48 @@
+/* Mobile layout final authority. Loaded after all legacy styles. */
+@media (max-width:700px) {
+  :root { --ta-top:64px; --ta-bottom:66px; }
+  html { width:100%; max-width:100%; overflow-x:clip; scroll-padding-top:calc(var(--ta-top) + 12px)!important; scroll-padding-bottom:calc(var(--ta-bottom) + 12px)!important; }
+  body { width:100%; min-width:0; max-width:100%; margin:0!important; padding:calc(var(--ta-top) + 8px) 0 calc(var(--ta-bottom) + 18px)!important; overflow-x:clip!important; min-height:100vh; min-height:100dvh; }
+  body > header.topbar { position:fixed!important; inset:0 0 auto 0!important; top:0!important; bottom:auto!important; z-index:10000!important; width:100%!important; max-width:100%!important; box-sizing:border-box!important; display:grid!important; grid-template-columns:minmax(0,1fr) auto auto!important; align-items:center!important; gap:6px!important; min-height:60px!important; padding:calc(8px + env(safe-area-inset-top,0px)) 10px 8px!important; margin:0!important; background:#f8f9fc!important; transform:none!important; }
+  body > header.topbar .brand { min-width:0!important; max-width:100%!important; width:auto!important; font-size:clamp(10px,2.7vw,13px)!important; gap:6px!important; overflow:hidden; }
+  body > header.topbar .brand > span:last-child { min-width:0; overflow-wrap:anywhere; line-height:1.25; }
+  body > header.topbar .brand-mark { width:34px!important; height:34px!important; flex:0 0 34px!important; }
+  body > header.topbar #language,body > header.topbar .qa-language { min-width:0!important; max-width:91px!important; width:auto!important; padding:7px 3px!important; margin:0!important; font-size:10px!important; }
+  body > header.topbar .menu-toggle { flex:none!important; width:36px!important; height:40px!important; padding:0!important; margin:0!important; display:grid!important; place-items:center!important; }
+  body > header.topbar .nav-links { position:absolute!important; inset:auto 8px auto 8px!important; top:calc(100% + 2px)!important; width:auto!important; max-width:none!important; max-height:calc(100dvh - var(--ta-top) - var(--ta-bottom) - 12px)!important; overflow-y:auto!important; overscroll-behavior:contain; z-index:10001!important; }
+  body > header.topbar .nav-links:not(.open) { display:none!important; }
+  body > header.topbar .nav-links.open { display:flex!important; }
+  body > footer.footer { position:fixed!important; inset:auto 0 0 0!important; top:auto!important; bottom:0!important; z-index:9999!important; width:100%!important; max-width:100%!important; margin:0!important; box-sizing:border-box!important; padding:7px 8px calc(7px + env(safe-area-inset-bottom,0px))!important; background:#f8f9fc!important; transform:none!important; box-shadow:0 -3px 18px rgba(12,44,88,.1)!important; }
+  body > footer.footer .footer-inner { width:100%!important; max-width:100%!important; margin:0 auto!important; display:grid!important; grid-template-columns:repeat(3,minmax(0,1fr))!important; gap:5px!important; min-height:40px!important; align-items:center!important; }
+  body > footer.footer .footer-social { width:100%!important; min-width:0!important; max-width:100%!important; min-height:40px!important; padding:7px 2px!important; font-size:clamp(9px,2.6vw,11px)!important; gap:4px!important; display:flex!important; justify-content:center!important; white-space:nowrap; }
+  body > footer.footer .footer-social-icon { width:19px!important; height:19px!important; flex:0 0 19px!important; }
+  body > main { width:100%; min-width:0!important; max-width:100%!important; overflow-x:clip!important; }
+  .section-wrap, .hero.section-wrap, .qa-hero.section-wrap, .qa-section.section-wrap, .qa-references.section-wrap { width:calc(100% - 24px)!important; max-width:540px!important; margin-left:auto!important; margin-right:auto!important; min-width:0!important; }
+  .section-wrap *, .qa-hero *, .qa-section *, .qa-showcase-header * { min-width:0; }
+  .section-heading, .hero-copy, .about-layout, .education-layout, .contact-layout, .timeline-card, .education-card, .contact-card, .skill-panel, .qa-controls, .qa-card { max-width:100%!important; }
+  .hero { min-height:0!important; display:flex!important; flex-direction:column!important; gap:20px!important; padding-top:14px!important; }
+  .hero h1 { font-size:clamp(32px,10vw,49px)!important; overflow-wrap:anywhere!important; line-height:1.1!important; letter-spacing:-1.5px!important; }
+  .hero-copy { order:0!important; width:100%!important; }
+  .hero-visual { order:1!important; width:min(100%,295px)!important; max-width:100%!important; margin:0 auto!important; }
+  .hero-proof { display:flex!important; flex-wrap:nowrap!important; gap:12px!important; }
+  .proof-item { flex:1 1 0; min-width:0!important; }
+  .proof-line { display:none!important; }
+  .carousel-track:not(.qa-motion-track) { display:grid!important; grid-template-columns:minmax(0,1fr)!important; overflow:visible!important; width:100%!important; margin:0!important; padding:0!important; gap:12px!important; }
+  .carousel-track:not(.qa-motion-track) > * { width:100%!important; max-width:100%!important; flex:none!important; }
+  .qa-motion-window { overflow:hidden!important; max-width:100%!important; touch-action:pan-y!important; }
+  .qa-motion-track { display:flex!important; width:max-content!important; max-width:none!important; }
+  .qa-motion-group { display:flex!important; }
+  .qa-teaser-card { flex:0 0 clamp(220px,76vw,280px)!important; width:clamp(220px,76vw,280px)!important; }
+  .qa-answer pre, .qa-answer table, .qa-ref-table { max-width:100%!important; overflow-x:auto!important; }
+  .qa-answer, .qa-question, .timeline-title, .contact-row, .qa-card { overflow-wrap:anywhere; }
+  [id] { scroll-margin-top:calc(var(--ta-top) + 12px); }
+}
+@media(max-width:350px) {
+  body > header.topbar { padding-left:7px!important; padding-right:7px!important; gap:4px!important; }
+  body > header.topbar #language { max-width:77px!important; font-size:9px!important; }
+  .section-wrap,.hero.section-wrap,.qa-hero.section-wrap,.qa-section.section-wrap,.qa-references.section-wrap { width:calc(100% - 20px)!important; }
+}
+@media(max-width:700px) {
+  /* Decorative off-canvas glows were expanding the mobile layout viewport. */
+  body > .page-glow, .page-glow { display:none!important; }
+}
